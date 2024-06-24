@@ -25,6 +25,7 @@ export class AppComponent {
   }
 
   public onToggleOrientation() {
+    alert('onToggleOrientation clicked');
     this.isOrientationPortrait = !this.isOrientationPortrait;
     if (this.isOrientationPortrait) {
       // await ScreenOrientation.lock({ orientation: 'landscape' });
