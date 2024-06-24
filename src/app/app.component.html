@@ -1,12 +1,14 @@
 <!-- <br><br><br><br><br><br> -->
 this.logDeviceId: {{this.logDeviceId}}
 <br>
+<br>
+this.logDevicePlatform: {{this.logDevicePlatform}}
+<br><br>
 <a [routerLink]="['/test1']" routerLinkActive="router-link-active">test1</a>
 <br>
 <a [routerLink]="['/test2']" routerLinkActive="router-link-active">test2</a>
 <router-outlet></router-outlet>
 <br>
-logDeviceInfo : {{logDeviceInfo.__zone_symbol__value.identifier}}
 
 <br><br><br>
-<button (click)="onToggleOrientation()">onToggleOrientation()</button>
+<button *ngIf="logDevicePlatform !== 'web' " (click)="onToggleOrientation()">onToggleOrientation()</button>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Device, DeviceInfo } from '@capacitor/device';
+import { Device } from '@capacitor/device';
 import { ScreenOrientation } from '@capacitor/screen-orientation';
 
 @Component({
@@ -9,18 +9,30 @@ import { ScreenOrientation } from '@capacitor/screen-orientation';
 })
 export class AppComponent {
   title = 'tCapacitorDemo';
-  logDeviceInfo: any;
-  logDeviceId: any;
+
+  private logDeviceIdInfo: any;
+  public logDeviceId: string = '';
+
+  private logDeviceInfo: any;
+  public logDevicePlatform: string = '';
+
   isOrientationPortrait: boolean = true;
 
   constructor() { }
 
   ngOnInit() {
-    this.logDeviceInfo = Device.getId();
-    console.warn('this.logDeviceInfo: ', this.logDeviceInfo);
-    this.logDeviceInfo.then(() => {
-      this.logDeviceId = this.logDeviceInfo.__zone_symbol__value.identifier;
+    this.logDeviceIdInfo = Device.getId();
+    this.logDeviceIdInfo.then(() => {
+      console.warn('this.logDeviceIdInfo: ', this.logDeviceIdInfo);
+      this.logDeviceId = this.logDeviceIdInfo.__zone_symbol__value.identifier;
       console.warn('this.logDeviceId: ', this.logDeviceId);
+    });
+
+    this.logDeviceInfo = Device.getInfo();
+    this.logDeviceInfo.then(() => {
+      console.warn('this.logDeviceInfo: ', this.logDeviceInfo);
+      this.logDevicePlatform = this.logDeviceInfo.__zone_symbol__value.platform;
+      console.warn('this.logDevicePlatform: ', this.logDevicePlatform);
     });
   }
 
