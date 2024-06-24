@@ -25,14 +25,14 @@ export class AppComponent {
   }
 
   public onToggleOrientation() {
-    alert('onToggleOrientation clicked');
+    // alert('onToggleOrientation clicked');
     this.isOrientationPortrait = !this.isOrientationPortrait;
     if (this.isOrientationPortrait) {
-      // await ScreenOrientation.lock({ orientation: 'landscape' });
-      ScreenOrientation.lock({ orientation: 'landscape' });
-    } else {
       // await ScreenOrientation.lock({ orientation: 'portrait' });
       ScreenOrientation.lock({ orientation: 'portrait' });
+    } else {
+      // await ScreenOrientation.lock({ orientation: 'landscape' });
+      ScreenOrientation.lock({ orientation: 'landscape' });
     }
   }
 
