@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Device } from '@capacitor/device';
 import { ScreenOrientation } from '@capacitor/screen-orientation';
+import { TextZoom } from '@capacitor/text-zoom';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,9 @@ export class AppComponent {
 
   private logDeviceInfo: any;
   public logDevicePlatform: string = '';
+
+  private logDeviceZoomInfo: any;
+  private logDeviceZoomPreferredInfo: any;
 
   isOrientationPortrait: boolean = true;
 
@@ -34,6 +38,22 @@ export class AppComponent {
       this.logDevicePlatform = this.logDeviceInfo.__zone_symbol__value.platform;
       console.warn('this.logDevicePlatform: ', this.logDevicePlatform);
     });
+
+    this.logDeviceZoomInfo = TextZoom.get();
+    this.logDeviceZoomInfo.then(() => {
+      console.warn('this.logDeviceZoomInfo: ', this.logDeviceZoomInfo);
+      // this.logDevicePlatform = this.logDeviceInfo.__zone_symbol__value.platform;
+      // console.warn('this.logDevicePlatform: ', this.logDevicePlatform);
+    });
+
+    this.logDeviceZoomPreferredInfo = TextZoom.getPreferred();
+    this.logDeviceZoomPreferredInfo.then(() => {
+      console.warn('this.logDeviceZoomPreferredInfo: ', this.logDeviceZoomPreferredInfo);
+      // this.logDevicePlatform = this.logDeviceInfo.__zone_symbol__value.platform;
+      // console.warn('this.logDevicePlatform: ', this.logDevicePlatform);
+    });
+
+    TextZoom.set({ value: 3 });
   }
 
   public onToggleOrientation() {

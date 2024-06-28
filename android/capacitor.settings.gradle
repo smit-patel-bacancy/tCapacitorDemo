@@ -2,6 +2,9 @@
 include ':capacitor-android'
 project(':capacitor-android').projectDir = new File('../node_modules/@capacitor/android/capacitor')
 
+include ':capacitor-action-sheet'
+project(':capacitor-action-sheet').projectDir = new File('../node_modules/@capacitor/action-sheet/android')
+
 include ':capacitor-app'
 project(':capacitor-app').projectDir = new File('../node_modules/@capacitor/app/android')
 
@@ -10,3 +13,6 @@ project(':capacitor-device').projectDir = new File('../node_modules/@capacitor/d
 
 include ':capacitor-screen-orientation'
 project(':capacitor-screen-orientation').projectDir = new File('../node_modules/@capacitor/screen-orientation/android')
+
+include ':capacitor-text-zoom'
+project(':capacitor-text-zoom').projectDir = new File('../node_modules/@capacitor/text-zoom/android')
