@@ -1,12 +1,1507 @@
-/* You can add global styles to this file, and also import other style files */
-// body {
-//     margin-top: constant(safe-area-inset-top);
-//     margin-top: env(safe-area-inset-top);
-//     margin-bottom: calc(4px + env(safe-area-inset-top));
+//* You can add global styles to this file, and also import other style files */
+// @import 'src/assets/scss/index.scss';
+@import "KendoILMS.css";
+
+@import "tokens";
+// @import '@progress/kendo-theme-default/dist/all';
+@import "overrides";
+
+// @import "bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap";
+// @import "../node_modules/ag-grid-community/styles/ag-grid.css";
+// @import "../node_modules/ag-grid-community/styles/ag-theme-alpine.css";
+
+html {
+  font-size: 100%;
+}
+
+.goog-te-banner-frame {
+  display: none;
+  top: 0px;
+}
+
+.ag-theme-alpine .ag-header-cell {
+  // padding: 0px !important;
+  padding: 5px !important;
+  // padding: 5px 15px 5px 15px !important;
+  // text-align: center;
+  // background-color: rgb(142, 205, 255);
+}
+
+input.KendoLargerCheckbox {
+  width: 20px;
+  height: 20px;
+  background-color: #c5e5fc;
+  border: 1px solid black;
+}
+
+.kendoDropdown {
+  height: 28px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.kendoCompact25 {
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: 28px;
+  border: 1px solid black;
+  //   background-color: #e9f4fc;
+}
+
+// added on 27-10-2022
+.kendoCompact25 .k-input-inner {
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  // height: 29px;
+  border: 0px solid black;
+  //   background-color: #e9f4fc;
+}
+
+// added on 27-10-2022
+.kendoCompact25Right .k-input-inner {
+  align-items: center;
+  text-align: right;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  // height: 29px;
+  border: 0px solid black;
+  //   background-color: #e9f4fc;
+}
+
+.kendoCheckbox25 {
+  align-items: center;
+  margin-top: 2px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-top: 2px;
+  padding-bottom: 0px;
+  height: 25px;
+}
+
+.kendoDateInput25 {
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 2px;
+  height: 25px;
+  width: 82px;
+}
+
+.k-textbox {
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: 28px;
+  border: 1px solid black;
+}
+
+.kendoDateInput25W {
+  vertical-align: top;
+  margin-bottom: 1px;
+  padding-top: -1px;
+  padding-bottom: -1px;
+  height: 24px;
+  width: 90px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.kendoDatePicker25xx {
+  align-items: center;
+  margin-top: 2px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 2px;
+  height: 25px;
+  width: 111px;
+}
+
+.kendoDatePicker25 {
+  height: 25px;
+  width: 115px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.kendo-label {
+  align-items: center;
+  margin-top: px;
+  margin-bottom: 1px;
+  margin-right: 3px;
+  margin-left: 1px;
+  padding-top: 1px;
+  font-size: 100%;
+}
+
+.label {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-right: 1px;
+  margin-left: 1px;
+  padding-top: 1px;
+}
+
+.k-tabstrip-items-wrapper {
+  overflow-x: auto;
+}
+
+.ag-cust-highlight-row {
+  font-weight: bold !important;
+  background-color: #9fd2f7 !important;
+}
+
+.ag-cell-cust-left-align {
+  text-align: left !important;
+  padding: 5px 15px 5px 15px !important;
+}
+
+.ag-cell-cust-right-align {
+  text-align: right !important;
+  padding: 5px 15px 5px 15px !important;
+}
+
+.ag-theme-alpine .ag-row-selected {
+  // background-color: #4abbff;
+  background-color: #9fd2f7;
+}
+
+// .ag-theme-alpine .ag-header-cell {
+//   // padding: 0px !important;
+//   padding: 5px 15px 5px 15px !important;
+//   // text-align: center;
 // }
+
+.ag-theme-alpine .ag-ltr .ag-cell-focus {
+  border: 1px solid red;
+}
+
+.ag-theme-alpine .ag-ltr .ag-cell {
+  border-right: 1px solid #aaa;
+  font-size: 12px;
+  // padding: 0px !important;
+  padding: 0px;
+  white-space: break-spaces;
+  text-align: center;
+  line-height: 2 !important;
+  padding-top: 5px !important;
+  font-weight: 700;
+}
+
+.ag-header-cell-label {
+  // justify-content: center;
+  text-overflow: clip;
+  overflow: visible;
+  white-space: normal;
+}
+
+.ag-header-cell-text {
+  overflow: visible;
+  text-overflow: unset;
+  white-space: normal;
+}
+
+.red-flag {
+  background-color: lightsalmon;
+}
+
+.green-flag {
+  background-color: lightgreen;
+}
+
+.blue-flag {
+  background-color: lightblue;
+}
+
+.gray-flag {
+  background-color: lightgray;
+}
+
+.number-list-content {
+  padding-top: 15px;
+
+  .number-search-filter {
+    max-width: 1050px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #d0d8e8;
+    background: #fff;
+  }
+
+  .number-search-results {
+    border-radius: 8px;
+    border-left: 1px solid #d0d8e8;
+    border-right: 1px solid #d0d8e8;
+    background: #fff;
+  }
+}
+
+.lineheading {
+  text-align: left;
+  left: 0px;
+  right: 0px;
+  margin-top: -23px !important;
+
+  h4 {
+    display: inline-block;
+    background-color: #fff;
+    z-index: 1;
+    padding: 0px 15px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.boxdiv {
+  padding: 15px 15px 15px;
+  border: #d0d8e8 solid 1px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.boxmiddile {
+  padding: 15px 15px 0px;
+  border: #d0d8e8 solid 1px;
+  border-radius: 8px;
+  position: relative;
+
+  h5 {
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    top: 0px;
+    color: #616161;
+    font-size: 17px;
+    font-weight: 300;
+    top: -10px;
+    background-color: #fff;
+  }
+}
+
+h5 {
+  font-size: 16px;
+}
+
+.btn-custom {
+  padding: 2px;
+  font-size: 0.8rem;
+}
+
+:host ::ng-deep .w-none .main-box {
+  min-width: auto;
+}
+
+.h5-small {
+  font-size: 14px;
+}
+
+/* The container */
+
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 300;
+  color: #afabab;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+
+.container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+
+.container-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+
+.container-checkbox:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+
+.container-checkbox input:checked~.checkmark {
+  background-color: #455463;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.container-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+
+.container-checkbox input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+
+.container-checkbox .checkmark:after {
+  left: 6px;
+  top: 4px;
+  width: 6px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* The container */
+
+.container-radio {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #afabab;
+  font-weight: 300;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+
+.container-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+
+.container-radio .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+
+.container-radio:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+
+.container-radio input:checked~.checkmark {
+  background-color: #455463;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+
+.container-radio .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+
+.container-radio input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+
+.container-radio .checkmark:after {
+  top: 6.1px;
+  left: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
+}
+
+.height-blank {
+  height: 31px;
+}
+
+.height-blank-24 {
+  height: 24px;
+}
+
+.height45 {
+  height: 33px;
+}
+
+.form-control-input {
+  height: calc(1.1em + 0.75rem + 2px);
+  font-size: 12px;
+  padding: 0.375rem 0.3rem;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.float250 {
+  width: 250px;
+}
+
+.float250 input {
+  float: right;
+}
+
+.float250 label {
+  color: #2d2d2d;
+  font-size: 14px;
+}
+
+.float250 span {
+  display: table-cell;
+  vertical-align: middle;
+  width: 150px;
+}
+
+.float300 {
+  width: 300px;
+}
+
+.float300 input {
+  float: right;
+}
+
+.float300 label {
+  color: #2d2d2d;
+  font-size: 14px;
+}
+
+.float300 span {
+  display: table-cell;
+  vertical-align: middle;
+  width: 250px;
+}
+
+.float450 {
+  width: 450px;
+}
+
+.float450 input {
+  float: right;
+}
+
+.float450 label {
+  color: #2d2d2d;
+  font-size: 14px;
+}
+
+.float450 span {
+  display: table-cell;
+  vertical-align: middle;
+  width: 250px;
+}
+
+.float550 {
+  width: 550px;
+}
+
+.float550 input {
+  float: right;
+}
+
+.float550 label {
+  color: #2d2d2d;
+  font-size: 14px;
+}
+
+.float550 span {
+  display: table-cell;
+  vertical-align: middle;
+  width: 350px;
+}
+
+.card-container {
+  background-color: $white;
+  padding: 40px 0;
+  text-align: center;
+  margin: 25px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  .card-component {
+    grid-column: 1 / -1;
+    overflow: hidden;
+    // height: 600px;
+    // display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.header-height {
+  height: 184px;
+}
+
+.sidebar {
+  margin-top: 184px;
+}
+
+// new css
+.form-main-bce .custom-width-1.col-2 {
+  max-width: 10%;
+  flex: 0 0 10%;
+}
+
+.form-main-bce .custom-width-2.col-2 {
+  max-width: 12%;
+  flex: 0 0 12%;
+}
+
+.form-main-bce .custom-width-3.col-2 {
+  max-width: 20%;
+  flex: 0 0 20%;
+}
+
+.form-main-bce .custom-width-4.col-2 {
+  max-width: 16%;
+  flex: 0 0 16%;
+}
+
+// new css : 21-03-2024
+.form-main-bce .custom-width-1n.col-2 {
+  max-width: 9%;
+  flex: 0 0 9%;
+}
+
+.form-main-bce .custom-width-2n.col-2 {
+  max-width: 13%;
+  flex: 0 0 13%;
+}
+
+.form-main-bce .custom-width-3n.col-2,
+.form-main-bce .custom-width-31n.col-2 {
+  max-width: 15%;
+  flex: 0 0 15%;
+}
+
+.form-main-bce .custom-width-4n.col-2 {
+  max-width: 27%;
+  flex: 0 0 27%;
+}
+
+.form-main-bce .custom-width-5n.col-2 {
+  max-width: 33%;
+  flex: 0 0 33%;
+}
+
+// End of new css: 21-03-2024
+
+.form-main-bce .custom-box-main {
+  border-radius: 10px;
+  border: 1px solid #c1c4c4;
+  padding: 15px;
+}
+
+.form-main-bce h2.main-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #13678c;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #13678c;
+}
+
+.form-main-bce h3.second-title {
+  font-size: 18px;
+  color: #000;
+  position: relative;
+}
+
+.form-main-bce h3.second-title::before {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  top: 30px;
+  content: "";
+  height: 2px;
+  background-color: #000;
+}
+
+.form-main-bce .k-textbox {
+  height: 20px;
+  width: 100%;
+  line-height: normal;
+  // vertical-align: sub;
+  // vertical-align: super;
+}
+
+.form-main-bce .kendoDropdown {
+  height: 20px;
+  width: 100%;
+  line-height: normal;
+  // vertical-align: super;
+}
+
+.form-main-bce .k-dropdown,
+.form-main-bce .k-dropdowntree {
+  width: 100%;
+}
+
+.form-main-bce .input-style {
+  border-radius: 5px;
+  width: 100%;
+  padding: 0px 5px;
+  vertical-align: super;
+  font-weight: 600;
+  color: #003f59;
+  border: 1px solid black;
+  background-color: #e9f4fc;
+}
+
+.form-main-bce .k-menu-link {
+  border-radius: 5px;
+  width: 100%;
+  padding: 0px 5px;
+  font-weight: 600;
+  color: #003f59;
+  border: 1px solid black;
+  background-color: #e9f4fc;
+}
+
+.form-main-bce .form-control-plaintext {
+  width: 100%;
+  border-radius: 5px;
+  padding: 0px 5px 5px 5px;
+  font-weight: 600;
+  color: #003f59;
+  height: 20px;
+  font-size: 14px;
+  border: 1px solid black;
+  background-color: #e9f4fc;
+  line-height: 18px;
+}
+
+.form-main-bce .form-control-plaintext2 {
+  width: 100%;
+  border-radius: 5px;
+  padding: 0px 5px 5px 5px;
+  font-weight: 600;
+  color: #003f59;
+  font-size: 14px;
+  border: 1px solid black;
+  background-color: #e9f4fc;
+}
+
+.form-main-bce .fs-14 {
+  font-size: 14px;
+}
+
+.form-main-bce .fs-16 {
+  font-size: 16px;
+}
+
+.form-main-bce .fw-100 {
+  font-weight: 100;
+}
+
+.form-main-bce .fw-400 {
+  font-weight: 400;
+}
+
+.form-main-bce .fw-500 {
+  font-weight: 500;
+}
+
+.form-main-bce .fw-600 {
+  font-weight: 600;
+}
+
+.form-main-bce .fw-700 {
+  font-weight: 700;
+}
+
+.form-main-bce .line-height-normal {
+  line-height: normal;
+}
+
+.form-main-bce .k-maskedtextbox {
+  height: 20px;
+  line-height: normal;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.form-main-bce .custom-h16 {
+  height: 16px !important;
+}
+
+.form-main-bce .text-dark-grey {
+  color: #726565;
+}
+
+.form-main-bce .k-dropdown .k-dropdown-wrap,
+.form-main-bce .k-dropdowntree .k-dropdown-wrap {
+  border-color: rgba(0, 0, 0, 0.08);
+  color: #003f59;
+  background-color: #e9f4fc;
+  background-image: linear-gradient(#e9f4fc, #e0f0fb);
+}
+
+.form-main-bce .border-radius-40 {
+  border-radius: 40px;
+}
+
+// .form-main-bce .k-input-inner {
+//   height: 17px;
+// }
+
+.form-main-bce input.ng-untouched.ng-pristine.ng-valid {
+  height: 20px;
+}
+
+.form-main-bce input .k-dropdown,
+.form-main-bce input .k-dropdowntree {
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.form-main-bce .k-dropdown,
+.form-main-bce .k-dropdowntree {
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  // vertical-align: super;
+}
+
+.form-main-bce .k-datepicker {
+  width: 12.4em;
+}
+
+.form-main-bce .k-button {
+  padding: 1px 8px;
+}
+
+.form-main-bce label {
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.form-main-bce .kendo-label {
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.form-main-bce kendo-label {
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.form-main-bce .font-weight-600 {
+  font-weight: 600;
+}
+
+.form-main-bce .kendoDatePicker25 {
+  height: 20px;
+}
+
+// added stepper label and custom class on 1-4-2022
+@media (min-width: 432px) {
+  .header-height {
+    height: 145px;
+  }
+}
+
+@media (min-width: 480px) {
+  .header-height {
+    height: 145px;
+    // height: 128px;
+  }
+
+  .sidebar {
+    margin-top: 128px;
+  }
+
+  .card-container {
+    text-align: initial;
+    padding: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-height {
+    height: 100px;
+    // height: 118px;
+  }
+
+  .sidebar {
+    margin-top: 118px;
+  }
+
+  .card-container {
+    &.grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-buttons {
+      text-align: center;
+    }
+
+    .card-ranges {
+      text-align: right;
+      grid-column: 3 / 4;
+    }
+
+    .card-component {
+      grid-column-start: 1;
+      grid-column-end: -1;
+      // height: 400px;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .stpperLabel {
+    height: 100%;
+    line-height: 28px;
+    display: inline-block;
+    white-space: initial;
+  }
+
+  .custom-label {
+    text-align: right;
+  }
+
+  .custom-btn-align {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .stpperLabel {
+    height: 100%;
+    line-height: 28px;
+    display: inline-block;
+    white-space: initial;
+  }
+
+  .custom-label {
+    text-align: right;
+  }
+
+  .custom-btn-align {
+    text-align: left;
+  }
+}
+
+// screen and (min-width: 768px) and (max-width: 1024px)
+@media (min-width: 768px) and (max-width: 1024px) {
+  .form-main-bce .custom-width-1.col-2 {
+    max-width: 18%;
+    flex: 0 0 18%;
+  }
+
+  .form-main-bce .custom-width-2.col-2 {
+    max-width: 20%;
+    flex: 0 0 20%;
+  }
+
+  .form-main-bce .custom-width-3.col-2 {
+    max-width: 30%;
+    flex: 0 0 30%;
+  }
+
+  .form-main-bce .custom-width-4.col-2 {
+    max-width: 16%;
+    flex: 0 0 16%;
+  }
+
+  .form-main-bce .custom-width-1n.col-2 {
+    max-width: 18%;
+    flex: 0 0 18%;
+  }
+
+  .form-main-bce .custom-width-2n.col-2 {
+    max-width: 20%;
+    flex: 0 0 20%;
+  }
+
+  .form-main-bce .custom-width-3n.col-2 {
+    max-width: 22%;
+    flex: 0 0 22%;
+  }
+
+  .form-main-bce .custom-width-31n.col-2 {
+    max-width: 25%;
+    flex: 0 0 25%;
+  }
+
+  .form-main-bce .custom-width-4n.col-2 {
+    max-width: 43%;
+    flex: 0 0 43%;
+  }
+
+  .form-main-bce .custom-width-5n.col-2 {
+    max-width: 46%;
+    flex: 0 0 46%;
+  }
+}
+
+@media (width: 1024px) {
+  .stpperLabel {
+    font-size: 15px;
+    width: 150px;
+    white-space: initial;
+  }
+
+  .custom-label {
+    text-align: right;
+  }
+
+  .custom-btn-align {
+    text-align: left;
+  }
+}
+
+@media (min-width: 783px) {
+  .header-height {
+    height: 71px;
+  }
+}
+
+@media (min-width: 900px) {
+  .header-height {
+    height: 71px;
+  }
+
+  .sidebar {
+    margin-top: 71px;
+  }
+
+  .card-container {
+    .card-buttons {
+      text-align: center;
+      grid-column: 2 / 3;
+      grid-row: 1;
+    }
+  }
+
+  .card-header-wrapper {
+    flex-direction: column;
+
+    .card-buttons,
+    .card-ranges {
+      margin-top: 1rem;
+      text-align: left;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .custom-width-100 {
+    width: 100% !important;
+  }
+
+  .custom-max-width-100 {
+    max-width: 100% !important;
+  }
+
+  .custom-label {
+    text-align: left;
+  }
+
+  .custom-btn-align {
+    text-align: left;
+  }
+}
+
+@media (width: 991px) {
+  .flex-1-custom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .custom-box-full-w {
+    max-width: 100%;
+  }
+
+  .custom-width-100 {
+    width: 100% !important;
+  }
+
+  .custom-label {
+    text-align: left;
+  }
+}
+
+@media (max-width: 991px) {
+  .stpperLabel {
+    height: 100%;
+    line-height: 28px;
+    display: inline-block;
+    white-space: initial;
+  }
+
+  .custom-label {
+    text-align: left;
+  }
+
+  .custom-btn-align {
+    text-align: left;
+  }
+}
+
+@media (width: 768px) {
+  .custom-box-full-w {
+    max-width: 100%;
+  }
+
+  .flex-1-custom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .custom-width-100 {
+    width: 100% !important;
+  }
+
+  .stpperLabel {
+    line-height: 15px;
+    display: inline-block;
+    font-size: 10px;
+    inline-size: 50px;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    width: 55px;
+    white-space: initial;
+  }
+
+  .custom-label {
+    text-align: left;
+  }
+
+  .custom-btn-align {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .stpperLabel {
+    line-height: 15px;
+    display: inline-block;
+    font-size: 10px;
+    inline-size: 50px;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    width: 55px;
+    white-space: initial;
+  }
+
+  .custom-label {
+    text-align: left;
+  }
+
+  .custom-btn-align {
+    text-align: center;
+  }
+}
+
+@media (min-width: 767px) {
+  .form-main-bce .custom-width-1.col-2 {
+    padding-right: 0;
+  }
+
+  .form-main-bce .custom-width-2.col-2 {
+    padding-right: 0;
+  }
+
+  .form-main-bce .custom-width-3.col-2 {
+    padding-right: 0;
+  }
+
+  .form-main-bce .custom-width-4.col-2 {
+    padding-right: 0;
+  }
+
+  .form-main-bce .custom-width-1n.col-2,
+  .form-main-bce .custom-width-2n.col-2,
+  .form-main-bce .custom-width-3n.col-2,
+  .form-main-bce .custom-width-31n.col-2,
+  .form-main-bce .custom-width-4n.col-2,
+  .form-main-bce .custom-width-5n.col-2 {
+    padding-right: 0;
+  }
+
+  .form-main-bce .pr-15 {
+    padding-right: 15px !important;
+  }
+
+  .form-main-bce .pl-15 {
+    padding-left: 15px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .form-main-bce .container {
+    padding: 0 10px;
+  }
+
+  .form-main-bce .custom-width-1.col-2 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .form-main-bce .custom-width-2.col-2 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .form-main-bce .custom-width-3.col-2 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .form-main-bce .custom-width-4.col-2 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .form-main-bce .custom-width-1n.col-2,
+  .form-main-bce .custom-width-2n.col-2,
+  .form-main-bce .custom-width-3n.col-2,
+  .form-main-bce .custom-width-31n.col-2,
+  .form-main-bce .custom-width-4n.col-2,
+  .form-main-bce .custom-width-5n.col-2 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .form-main-bce h3.second-title::before {
+    display: none;
+  }
+
+  .form-main-bce h2.main-title {
+    font-size: 18px;
+  }
+
+  .form-main-bce h3.second-title {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .form-main-bce label {
+    font-size: 14px;
+  }
+
+  .form-main-bce .fs-16 {
+    font-size: 14px;
+  }
+
+  .form-main-bce .kendo-label {
+    margin-left: 0;
+  }
+
+  .custom-width-100 {
+    width: 100% !important;
+  }
+
+  .custom-max-width-100 {
+    max-width: 100% !important;
+  }
+
+  .stpperLabel {
+    line-height: 15px;
+    display: inline-block;
+    font-size: 10px;
+    inline-size: 50px;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    width: 55px;
+    white-space: initial;
+  }
+
+  .custom-label {
+    text-align: left;
+  }
+}
+
+@media (max-width: 500px) {
+  .stpperLabel {
+    line-height: 15px;
+    display: inline-block;
+    font-size: 10px;
+    inline-size: 50px;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    width: 55px;
+    white-space: initial;
+  }
+}
+
+.main-page {
+  .card-container {
+    text-align: left;
+    padding: 0px;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+.page-width {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.padding-5 {
+  padding: 5px !important;
+}
+
+.padding-10 {
+  padding: 10px !important;
+}
+
+/* Importing Bootstrap SCSS file. */
+
+// @import "bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+/* Importing Bootstrap SCSS file. */
+
+// @import 'bootstrap/scss/bootstrap';
+//start css 9-8-21
+.k-textbox {
+  height: 20px;
+}
+
+.kendoDropdown {
+  height: 20px;
+}
+
+.kendo-dropdown kendo-menu ul li span.k-link {
+  height: 20px !important;
+  font-weight: 600 !important;
+}
+
+// .k-input-inner {
+//   height: 16px;
+// }
+
+.kendoDatePicker25 {
+  height: 20px;
+}
+
+.kendoDateInput25W {
+  height: 20px;
+}
+
+.custom-radio-main {
+  input {
+    border: 1px solid black;
+    margin-right: 5px;
+  }
+}
+
+.custom-ml-0 {
+  margin-left: 10px;
+}
+
+.custom-ml-1 {
+  margin-left: 10px;
+}
+
+.custom-ml-2 {
+  margin-left: 13px;
+}
+
+.k-notification-group {
+  top: auto !important;
+}
+
+// .header-class-ag-grid {
+//   background-color: #13688c;
+//   color: white;
+//   text-align: center;
+// }
+
+// ag-header-row ag-header-row-column-group
+// .ag-header-row-column-group :hover {
+.ag-header-row-column-group {
+  background-color: #13688c !important;
+  color: white !important;
+  // text-align: center !important;
+  // text-align: left !important;
+}
+
+.ag-header-cust-left-align {
+  text-align: left !important;
+  padding: 5px 15px 5px 15px !important;
+}
+
+.ag-header-cust-right-align {
+  text-align: right !important;
+  padding: 5px 15px 5px 15px !important;
+}
+
+.custom-header {
+  text-align: center;
+  line-height: 2;
+}
+
+.custom-red-btn {
+  background-color: rgb(239, 239, 239) !important;
+  color: red !important;
+  font-weight: bold !important;
+  background-image: linear-gradient(rgba(19, 76, 140, 0),
+      rgba(19, 76, 140, 0.2)) !important;
+  border-color: #13688c !important;
+}
+
+.green-btn {
+  background-color: lightgreen !important;
+  color: black !important;
+}
+
+.custom-list {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.required {
+  color: red !important;
+}
+
+.required-control {
+  background-color: #ffff99 !important;
+}
+
+.lbl-blue {
+  color: blue !important;
+}
+
+.lbl-color {
+  color: #13688c;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.br-btn {
+  white-space: initial;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.k-appbar-dark {
+  color: #fff;
+  background-color: #343a40;
+}
+
+.cust-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .cust-container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .cust-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .cust-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cust-container {
+    max-width: 1400px;
+    // max-width: 1140px;
+  }
+}
+
+// added on 07-May-2024
+.gantt-chart-div tbody.k-table-tbody {
+  font-size: smaller !important;
+}
+
+// added on 16-May-2024
+.gantt-chart-div .k-views-dropdown {
+  height: auto;
+}
 
 // css to avoid 'notch' in mobile devices
 body {
-    padding-top: env(safe-area-inset-top);
-    // padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-  }
+  padding-top: env(safe-area-inset-top);
+  // padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}

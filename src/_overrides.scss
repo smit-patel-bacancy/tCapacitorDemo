@@ -1,0 +1,344 @@
+// Compatible with @progress/kendo-theme-default v.6.4.0
+
+%tb-typography {
+  @include typography-classes($tb-typography);
+}
+
+%tb-effects {
+  @include effects-classes($tb-effects);
+}
+
+.k-radio-label {
+  flex-direction: row;
+}
+.k-radio {
+  border-bottom-color: $tb-solid-black;
+  border-left-color: $tb-solid-black;
+  border-right-color: $tb-solid-black;
+  border-top-color: $tb-solid-black;
+}
+.k-input.k-focus.k-input-solid,
+.k-input.k-state-focus.k-input-solid,
+.k-input.k-state-focused.k-input-solid,
+.k-input:focus.k-input-solid {
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  border-left-color: rgba(0, 0, 0, 0.1);
+  border-right-color: rgba(0, 0, 0, 0.1);
+  border-top-color: rgba(0, 0, 0, 0.1);
+}
+.k-input.k-focus,
+.k-input.k-state-focus,
+.k-input.k-state-focused,
+.k-input:focus {
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px;
+}
+.k-checkbox-label {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  height: $tb-cs-input-height;
+}
+.k-checkbox.k-focus.k-rounded-md,
+.k-checkbox.k-state-focus.k-rounded-md,
+.k-checkbox.k-state-focused.k-rounded-md,
+.k-checkbox:focus.k-rounded-md {
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+.k-checkbox.k-rounded-md {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.k-dropdownlist.k-hover.k-picker-solid,
+.k-dropdownlist.k-state-hover.k-picker-solid,
+.k-dropdownlist.k-state-hovered.k-picker-solid,
+.k-dropdownlist:hover.k-picker-solid {
+  background-color: $tb-component-bg;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02));
+}
+.k-maskedtextbox {
+  height: 20px;
+}
+.k-maskedtextbox.k-input {
+  align-items: start;
+}
+.k-numerictextbox {
+  height: $tb-cs-input-height;
+}
+.k-input {
+  height: $tb-cs-input-height;
+  font-weight: 600;
+}
+.k-input.k-input-solid {
+  color: inherit;
+}
+.k-textarea.k-input {
+  height: auto;
+}
+.k-datepicker.k-input {
+  height: $tb-cs-input-height;
+  width: 12.4em;
+}
+.k-dropdownlist {
+  height: $tb-cs-input-height;
+}
+.k-dropdownlist.k-picker-solid {
+  color: inherit;
+}
+.k-dropdownlist.k-picker {
+  font-weight: 600;
+}
+.k-label {
+  font-weight: 600;
+}
+.k-numerictextbox .k-input-inner::placeholder {
+  align-self: center;
+}
+.k-numerictextbox
+  .k-input-spinner.k-spin-button
+  .k-button.k-button-md.k-button-solid.k-button-solid-base.k-icon-button.k-spinner-increase
+  .k-button-icon.k-icon.k-i-caret-alt-up::before {
+  content: "\e004";
+}
+.k-numerictextbox
+  .k-input-spinner.k-spin-button
+  .k-button.k-button-md.k-button-solid.k-button-solid-base.k-icon-button.k-spinner-increase
+  .k-button-icon.k-icon.k-i-caret-alt-up {
+  font-size: $tb-cs-icon-height;
+}
+.k-maskedtextbox .k-input-inner {
+  align-self: center;
+}
+.k-dropdowntree {
+  height: $tb-cs-input-height;
+}
+.k-floating-label-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+  align-self: start;
+}
+.k-dropdownlist .k-input-inner {
+  font-weight: 600;
+}
+.k-dropdownlist .k-input-inner .k-input-value-text {
+  color: inherit;
+  font-weight: 600;
+}
+.k-input::placeholder {
+  opacity: inherit;
+  visibility: visible;
+  font-weight: 400;
+  color: #95b3c0;
+}
+.k-datepicker .k-input-inner {
+  height: inherit;
+}
+.k-datepicker
+  .k-button.k-button-md.k-button-solid.k-button-solid-base.k-icon-button.k-input-button {
+  height: inherit;
+}
+.k-panelbar .k-panelbar-item.k-panelbar-header.k-level-0 .k-link {
+  color: $tb-base-text;
+  padding-bottom: auto;
+  padding-left: auto;
+  padding-right: auto;
+  padding-top: auto;
+}
+.k-reset.k-header.k-menu.k-menu-horizontal .k-item.k-menu-item {
+  color: inherit;
+}
+.k-dialog-wrapper
+  .k-window.k-dialog
+  .k-window-titlebar.k-dialog-titlebar
+  .k-window-title.k-dialog-title {
+  font-size: 18px;
+}
+.k-tabstrip .k-tabstrip-items-wrapper .k-tabstrip-items.k-reset .k-item {
+  color: $tb-selected-bg;
+}
+.k-chip-list.k-chip-list-md .k-chip.k-chip-solid-base {
+  background-color: $tb-kendo-button-bg;
+  background-image: linear-gradient($tb-base-bg, $tb-base-bg);
+}
+.k-dialog-wrapper .k-window.k-dialog .k-window-titlebar.k-dialog-titlebar {
+  background-color: $tb-primary;
+  background-image: none;
+  color: $tb-body-bg;
+}
+.k-dialog-wrapper
+  .k-window.k-dialog
+  .k-window-titlebar.k-dialog-titlebar
+  .k-window-titlebar-actions.k-dialog-titlebar-actions
+  .k-window-titlebar-action.k-dialog-titlebar-action.k-button.k-button-md.k-button-flat.k-button-flat-base.k-rounded-md.k-icon-button
+  .k-button-icon.k-icon.k-i-x::before {
+  content: "\e11b";
+}
+.k-window .k-window-titlebar {
+  color: $tb-body-bg;
+  background-color: $tb-primary;
+  background-image: none;
+}
+.k-tabstrip.k-tabstrip-top .k-content.k-active,
+.k-tabstrip.k-tabstrip-top .k-content.k-state-active,
+.k-tabstrip.k-tabstrip-top .k-content:active {
+  background-color: $tb-body-bg;
+  background-image: none;
+}
+.k-datepicker.k-input.k-hover .k-input-inner,
+.k-datepicker.k-input.k-state-hover .k-input-inner,
+.k-datepicker.k-input.k-state-hovered .k-input-inner,
+.k-datepicker.k-input:hover .k-input-inner {
+  height: $tb-cs-datepicker-height;
+}
+.k-tabstrip .k-content.k-active,
+.k-tabstrip .k-content.k-state-active,
+.k-tabstrip .k-content:active {
+  background-color: $tb-body-bg;
+  background-image: none;
+}
+.k-datepicker.k-input
+  .k-button.k-button-md.k-button-solid.k-button-solid-base.k-icon-button.k-input-button
+  .k-button-icon.k-icon.k-i-calendar {
+  flex-direction: row;
+  display: inline-flex;
+  align-self: center;
+  font-size: $tb-cs-icon-height;
+}
+.k-datepicker.k-input .k-input-inner {
+  height: $tb-cs-datepicker-height;
+}
+.k-timepicker.k-input
+  .k-button.k-button-md.k-button-solid.k-button-solid-base.k-icon-button.k-input-button
+  .k-button-icon.k-icon.k-i-clock {
+  font-size: $tb-cs-icon-height;
+}
+.k-datetimepicker.k-input
+  .k-button.k-button-md.k-button-solid.k-button-solid-base.k-icon-button.k-input-button
+  .k-button-icon.k-icon.k-i-calendar {
+  font-size: $tb-cs-icon-height;
+}
+.k-panelbar
+  .k-panelbar-item.k-panelbar-header.k-level-0
+  .k-link
+  .k-panelbar-toggle.k-icon.k-i-chevron-down.k-panelbar-expand {
+  font-size: $tb-cs-icon-height;
+}
+.k-reset.k-header.k-menu.k-menu-horizontal
+  .k-item.k-menu-item
+  .k-link.k-menu-link
+  .k-icon.k-menu-expand-arrow.k-i-caret-alt-down {
+  font-size: $tb-cs-icon-height;
+}
+.k-listbox
+  .k-listbox-actions
+  .k-button.k-button-solid.k-button-solid-base.k-icon-button
+  .k-button-icon.k-icon {
+  font-size: $tb-cs-icon-height;
+}
+.k-dropdownlist .k-input-button .k-button-icon.k-icon.k-i-caret-alt-down {
+  font-size: $tb-cs-icon-height;
+}
+.k-dropdowntree
+  .k-input-button.k-button.k-icon-button
+  .k-button-icon.k-icon.k-i-caret-alt-down {
+  font-size: $tb-cs-icon-height;
+}
+.k-combobox.k-input .k-input-button .k-button-icon.k-icon.k-i-caret-alt-down {
+  font-size: $tb-cs-icon-height;
+}
+.k-textbox.k-input.k-input-md.k-input-solid.k-rounded-md
+  .k-clear-value
+  .k-icon.k-i-x {
+  font-size: $tb-cs-icon-height;
+}
+.k-split-button.k-button-group
+  .k-button.k-icon-button.k-split-button-arrow
+  .k-button-icon.k-icon.k-i-caret-alt-down {
+  font-size: $tb-cs-icon-height;
+}
+.k-numerictextbox
+  .k-input-spinner.k-spin-button
+  .k-button.k-button-md.k-button-solid.k-button-solid-base.k-icon-button.k-spinner-decrease
+  .k-button-icon.k-icon.k-i-caret-alt-down {
+  font-size: $tb-cs-icon-height;
+}
+.k-slider
+  .k-button.k-button-md.k-button-solid.k-button-solid-base.k-icon-button.k-rounded-full.k-button-decrease
+  .k-button-icon.k-icon.k-i-caret-alt-left {
+  font-size: $tb-cs-icon-height;
+}
+.k-slider
+  .k-button.k-button-md.k-button-solid.k-button-solid-base.k-icon-button.k-rounded-full.k-button-increase
+  .k-button-icon.k-icon.k-i-caret-alt-right {
+  font-size: $tb-cs-icon-height;
+}
+.k-checkbox-wrap .k-checkbox {
+  background-color: $tb-kendo-hover-bg;
+  background-image: none;
+  border-bottom-color: $tb-solid-black;
+  border-left-color: $tb-solid-black;
+  border-right-color: $tb-solid-black;
+  border-top-color: $tb-solid-black;
+}
+.k-checkbox-wrap .k-checkbox.k-checkbox-md {
+  width: $tb-cs-input-height;
+  height: $tb-cs-input-height;
+}
+.k-datepicker.k-input.k-state-focus-within .k-input-inner,
+.k-datepicker.k-input:focus-within .k-input-inner {
+  height: $tb-cs-datepicker-height;
+}
+.k-datetimepicker.k-input .k-input-inner {
+  height: $tb-cs-datepicker-height;
+}
+.k-timepicker.k-input .k-input-inner {
+  height: $tb-cs-datepicker-height;
+}
+.k-daterangepicker .k-floating-label-container .k-dateinput .k-input-inner {
+  height: $tb-cs-datepicker-height;
+}
+.k-tabstrip {
+  background-color: $tb-body-bg;
+  background-image: none;
+  color: inherit;
+}
+.k-tabstrip
+  .k-tabstrip-items-wrapper
+  .k-tabstrip-items.k-reset
+  .k-item.k-active,
+.k-tabstrip
+  .k-tabstrip-items-wrapper
+  .k-tabstrip-items.k-reset
+  .k-item.k-state-active,
+.k-tabstrip .k-tabstrip-items-wrapper .k-tabstrip-items.k-reset .k-item:active {
+  background-color: $tb-body-bg;
+  background-image: none;
+}
+.k-tabstrip
+  .k-tabstrip-items-wrapper
+  .k-tabstrip-items.k-reset
+  .k-item.k-active
+  .k-link,
+.k-tabstrip
+  .k-tabstrip-items-wrapper
+  .k-tabstrip-items.k-reset
+  .k-item.k-state-active
+  .k-link,
+.k-tabstrip
+  .k-tabstrip-items-wrapper
+  .k-tabstrip-items.k-reset
+  .k-item:active
+  .k-link {
+  background-color: $tb-component-bg;
+  background-image: none;
+}
