@@ -65,7 +65,7 @@
     "@progress/kendo-theme-bootstrap": "^8.0.1",
     "@progress/kendo-theme-default": "^8.0.1",
     "@telerik/kendo-intl": "^2.3.1",
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^4.6.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
@@ -74,6 +74,7 @@
     "@angular-devkit/build-angular": "^16.2.1",
     "@angular/cli": "~16.2.1",
     "@angular/compiler-cli": "^16.2.0",
+    "@angular/localize": "^16.2.12",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
