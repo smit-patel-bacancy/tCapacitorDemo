@@ -1,20 +1,56 @@
-<!-- <br><br><br><br><br><br> -->
-this.logDeviceId: {{this.logDeviceId}}
-<br>
-<br>
-this.logDevicePlatform: {{this.logDevicePlatform}}
-<br><br>
-<a [routerLink]="['/test1']" routerLinkActive="router-link-active">test1</a>
-<br>
-<a [routerLink]="['/test2']" routerLinkActive="router-link-active">test2</a>
-<router-outlet></router-outlet>
-<br>
+<div class="container">
+    <div class="boxdiv mt-3 md-auto" Name="frameStandard">
+        <div class="lineheading">
+            <h4>Capacitor Demo</h4>
+        </div>
 
-<br><br><br>
-<button *ngIf="logDevicePlatform !== 'web' " (click)="onToggleOrientation()">onToggleOrientation()</button>
+        <div class="form-row md-auto">
+            <div class="col-md-2 mt-1 custom-label">
+                <kendo-label class="kendo-label bold">this.logDeviceId:</kendo-label>
+            </div>
+            <div class="col-md-8 mt-1">
+                <kendo-label class="kendo-label bold">{{this.logDeviceId}}</kendo-label>
+            </div>
+            <div class="col-md-2 mt-1">
+                <kendo-label class="kendo-label bold">this.logDevicePlatform:</kendo-label>
+            </div>
+            <div class="col-md-8 mt-1">
+                <kendo-label class="kendo-label bold">{{this.logDevicePlatform}}</kendo-label>
+            </div>
+        </div>
 
-<br><br>
-<button *ngIf="logDevicePlatform !== 'web' " (click)="onToggleZoom()">onToggleZoom()</button>
+        <div class="form-row md-auto">
+            <div class="col-md-2 mt-1 custom-label">
+                <a [routerLink]="['/test1']" routerLinkActive="router-link-active">test1</a>
+            </div>
+            <div class="col-md-2 mt-1">
+                <a [routerLink]="['/test2']" routerLinkActive="router-link-active">test2</a>
+            </div>
+            <div class="col-md-2 mt-1">
+            </div>
+            <div class="col-md-2 mt-1">
+            </div>
+        </div>
 
-<br><br>
-<button (click)="takePicture()">takePicture</button>
+        <div class="form-row md-auto">
+            <div class="col-md-12 mt-1">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+
+        <div class="form-row md-auto">
+            <div class="col-md-4 mt-1 text-center">
+                <button *ngIf="logDevicePlatform !== 'web' " kendoButton [primary]="true" type="button"
+                    Name="cmdonToggleOrientation" (click)="onToggleOrientation()">onToggleOrientation()</button>
+            </div>
+            <div class="col-md-4 mt-1 text-center">
+                <button *ngIf="logDevicePlatform !== 'web' " kendoButton [primary]="true" type="button"
+                    Name="cmdonToggleZoom" (click)="onToggleZoom()">onToggleZoom()</button>
+            </div>
+            <div class="col-md-4 mt-1 text-center">
+                <button kendoButton [primary]="true" class="custom-red-btn br-btn" type="button" Name="cmdTakePicture"
+                    (click)="takePicture()">takePicture</button>
+            </div>
+        </div>
+    </div>
+</div>
