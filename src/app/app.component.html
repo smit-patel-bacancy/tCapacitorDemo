@@ -55,5 +55,46 @@
                     (click)="takePicture()">takePicture</button>
             </div>
         </div>
+
+        <div *ngIf="imageWebPath" class="form-row md-auto">
+            imageWebPath
+            <div class="col-md-12 mt-1 text-center">
+                <img [src]="imageWebPath" width="300" height="300" alt="test Photo">
+            </div>
+        </div>
+
+        <div *ngIf="imagePath" class="form-row md-auto">
+            imagePath
+            <div class="col-md-12 mt-1 text-center">
+                <img [src]="imagePath" width="300" height="300" alt="test Photo">
+            </div>
+        </div>
+
+        <div *ngIf="logImageDetails" class="form-row md-auto">
+            <div class="col-md-2 mt-1">
+                <kendo-label class="kendo-label bold">format:</kendo-label>
+            </div>
+            <div class="col-md-2 mt-1">
+                <kendo-label class="kendo-label">{{logImageDetails.format}}</kendo-label>
+            </div>
+            <div class="col-md-2 mt-1">
+                <kendo-label class="kendo-label bold">webPath:</kendo-label>
+            </div>
+            <div class="col-md-2 mt-1">
+                <kendo-label class="kendo-label">{{logImageDetails.webPath}}</kendo-label>
+            </div>
+            <div class="col-md-2 mt-1">
+                <kendo-label class="kendo-label bold">imageWebPath:</kendo-label>
+            </div>
+            <div class="col-md-2 mt-1">
+                <kendo-label class="kendo-label">{{imageWebPath}}</kendo-label>
+            </div>
+            <div class="col-md-2 mt-1">
+                <kendo-label class="kendo-label bold">imagePath:</kendo-label>
+            </div>
+            <div class="col-md-2 mt-1">
+                <kendo-label class="kendo-label">{{imagePath}}</kendo-label>
+            </div>
+        </div>
     </div>
 </div>

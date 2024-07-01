@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Camera, CameraResultType } from '@capacitor/camera';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { Device } from '@capacitor/device';
 import { ScreenOrientation } from '@capacitor/screen-orientation';
 import { TextZoom } from '@capacitor/text-zoom';
@@ -21,6 +21,10 @@ export class AppComponent {
   private logDeviceZoomInfo: any;
   private logDeviceZoomPreferredInfo: any;
 
+  public logImageDetails: any;
+  public imageWebPath: string | undefined = '';
+  public imagePath: string | undefined = '';
+
   isOrientationPortrait: boolean = true;
   isToggleZoom: boolean = false;
 
@@ -41,19 +45,22 @@ export class AppComponent {
       console.warn('this.logDevicePlatform: ', this.logDevicePlatform);
     });
 
-    this.logDeviceZoomInfo = TextZoom.get();
-    this.logDeviceZoomInfo.then(() => {
-      console.warn('this.logDeviceZoomInfo: ', this.logDeviceZoomInfo);
-      // this.logDevicePlatform = this.logDeviceInfo.__zone_symbol__value.platform;
-      // console.warn('this.logDevicePlatform: ', this.logDevicePlatform);
-    });
+    if (this.logDevicePlatform !== 'web') {
 
-    this.logDeviceZoomPreferredInfo = TextZoom.getPreferred();
-    this.logDeviceZoomPreferredInfo.then(() => {
-      console.warn('this.logDeviceZoomPreferredInfo: ', this.logDeviceZoomPreferredInfo);
-      // this.logDevicePlatform = this.logDeviceInfo.__zone_symbol__value.platform;
-      // console.warn('this.logDevicePlatform: ', this.logDevicePlatform);
-    });
+      this.logDeviceZoomInfo = TextZoom.get();
+      this.logDeviceZoomInfo.then(() => {
+        console.warn('this.logDeviceZoomInfo: ', this.logDeviceZoomInfo);
+        // this.logDevicePlatform = this.logDeviceInfo.__zone_symbol__value.platform;
+        // console.warn('this.logDevicePlatform: ', this.logDevicePlatform);
+      });
+
+      this.logDeviceZoomPreferredInfo = TextZoom.getPreferred();
+      this.logDeviceZoomPreferredInfo.then(() => {
+        console.warn('this.logDeviceZoomPreferredInfo: ', this.logDeviceZoomPreferredInfo);
+        // this.logDevicePlatform = this.logDeviceInfo.__zone_symbol__value.platform;
+        // console.warn('this.logDevicePlatform: ', this.logDevicePlatform);
+      });
+    }
 
   }
 
@@ -80,21 +87,37 @@ export class AppComponent {
 
 
   public takePicture = async () => {
-    const image = await Camera.getPhoto({
-      quality: 90,
-      allowEditing: true,
-      resultType: CameraResultType.Uri
+    // both select from album and camera
+    // this.logImageDetails = await Camera.getPhoto({
+    //   quality: 90,
+    //   allowEditing: true,
+    //   resultType: CameraResultType.Uri
+    //   // resultType: CameraResultType.Base64
+    // });
+
+    // only camera
+    this.logImageDetails = await Camera.getPhoto({
+      resultType: CameraResultType.Uri,
+      source: CameraSource.Camera,
+      quality: 100
     });
 
-    console.warn('image: ', image);
+    console.warn('this.logImageDetails: ', this.logImageDetails);
     // image.webPath will contain a path that can be set as an image src.
     // You can access the original file using image.path, which can be
     // passed to the Filesystem API to read the raw data of the image,
     // if desired (or pass resultType: CameraResultType.Base64 to getPhoto)
-    // var imageUrl = image.webPath;
+    this.imageWebPath = this.logImageDetails.webPath;
+    this.imagePath = this.logImageDetails.path;
+    console.log('this.imagePath: ', this.imagePath);
+
+    // console.warn('this.logImageDetails.webPath?.includes(\'blob:\'): ', this.logImageDetails.webPath?.includes('blob:'));
+    // if (this.logImageDetails.webPath?.includes('blob:')) {
+    //   this.imageWebPath = this.logImageDetails.webPath?.substring(5);
+    // }
 
     // Can be set to the src of an image now
-    // imageElement.src = imageUrl;
+    // imageElement.src = imageWebPath;
   };
 
 }
