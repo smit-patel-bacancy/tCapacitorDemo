@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Camera, CameraResultType } from '@capacitor/camera';
 import { Device } from '@capacitor/device';
 import { ScreenOrientation } from '@capacitor/screen-orientation';
 import { TextZoom } from '@capacitor/text-zoom';
@@ -21,6 +22,7 @@ export class AppComponent {
   private logDeviceZoomPreferredInfo: any;
 
   isOrientationPortrait: boolean = true;
+  isToggleZoom: boolean = false;
 
   constructor() { }
 
@@ -53,7 +55,15 @@ export class AppComponent {
       // console.warn('this.logDevicePlatform: ', this.logDevicePlatform);
     });
 
-    TextZoom.set({ value: 3 });
+  }
+
+  public onToggleZoom() {
+    this.isToggleZoom = !this.isToggleZoom;
+    if (this.isToggleZoom) {
+      TextZoom.set({ value: 3 });
+    } else {
+      TextZoom.set({ value: 1 });
+    }
   }
 
   public onToggleOrientation() {
@@ -67,5 +77,24 @@ export class AppComponent {
       ScreenOrientation.lock({ orientation: 'landscape' });
     }
   }
+
+
+  public takePicture = async () => {
+    const image = await Camera.getPhoto({
+      quality: 90,
+      allowEditing: true,
+      resultType: CameraResultType.Uri
+    });
+
+    console.warn('image: ', image);
+    // image.webPath will contain a path that can be set as an image src.
+    // You can access the original file using image.path, which can be
+    // passed to the Filesystem API to read the raw data of the image,
+    // if desired (or pass resultType: CameraResultType.Base64 to getPhoto)
+    // var imageUrl = image.webPath;
+
+    // Can be set to the src of an image now
+    // imageElement.src = imageUrl;
+  };
 
 }

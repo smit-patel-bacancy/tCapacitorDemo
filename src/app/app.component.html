@@ -12,3 +12,9 @@ this.logDevicePlatform: {{this.logDevicePlatform}}
 
 <br><br><br>
 <button *ngIf="logDevicePlatform !== 'web' " (click)="onToggleOrientation()">onToggleOrientation()</button>
+
+<br><br>
+<button *ngIf="logDevicePlatform !== 'web' " (click)="onToggleZoom()">onToggleZoom()</button>
+
+<br><br>
+<button (click)="takePicture()">takePicture</button>
