@@ -1,40 +1,58 @@
 PODS:
   - Capacitor (6.1.0):
     - CapacitorCordova
+  - CapacitorActionSheet (6.0.1):
+    - Capacitor
   - CapacitorApp (6.0.0):
+    - Capacitor
+  - CapacitorCamera (6.0.1):
     - Capacitor
   - CapacitorCordova (6.1.0)
   - CapacitorDevice (6.0.0):
     - Capacitor
   - CapacitorScreenOrientation (6.0.1):
     - Capacitor
+  - CapacitorTextZoom (6.0.1):
+    - Capacitor
 
 DEPENDENCIES:
   - "Capacitor (from `../../node_modules/@capacitor/ios`)"
+  - "CapacitorActionSheet (from `../../node_modules/@capacitor/action-sheet`)"
   - "CapacitorApp (from `../../node_modules/@capacitor/app`)"
+  - "CapacitorCamera (from `../../node_modules/@capacitor/camera`)"
   - "CapacitorCordova (from `../../node_modules/@capacitor/ios`)"
   - "CapacitorDevice (from `../../node_modules/@capacitor/device`)"
   - "CapacitorScreenOrientation (from `../../node_modules/@capacitor/screen-orientation`)"
+  - "CapacitorTextZoom (from `../../node_modules/@capacitor/text-zoom`)"
 
 EXTERNAL SOURCES:
   Capacitor:
     :path: "../../node_modules/@capacitor/ios"
+  CapacitorActionSheet:
+    :path: "../../node_modules/@capacitor/action-sheet"
   CapacitorApp:
     :path: "../../node_modules/@capacitor/app"
+  CapacitorCamera:
+    :path: "../../node_modules/@capacitor/camera"
   CapacitorCordova:
     :path: "../../node_modules/@capacitor/ios"
   CapacitorDevice:
     :path: "../../node_modules/@capacitor/device"
   CapacitorScreenOrientation:
     :path: "../../node_modules/@capacitor/screen-orientation"
+  CapacitorTextZoom:
+    :path: "../../node_modules/@capacitor/text-zoom"
 
 SPEC CHECKSUMS:
   Capacitor: 187bd7847b6f71467015a20200a1a071be3e5f14
+  CapacitorActionSheet: bff87d8384fd38918531ee839a2ec3c2be115f6a
   CapacitorApp: 9d53aec7101f7b030a950c5bdc4df8612576b279
+  CapacitorCamera: 3b77b3e8311b98220de65e63445c0e4d0b30ce3a
   CapacitorCordova: be703980ca797f847c3356f78fa175d21c8330c2
   CapacitorDevice: f8fd88f9edd1261c55a109f32015b09bbbfdc4a0
   CapacitorScreenOrientation: 3d4965dcbda5d901b6a48350a5d270ad7d404e05
+  CapacitorTextZoom: 391f584cadac5ffb36534d045fae612c122c541b
 
-PODFILE CHECKSUM: 3c67431435ca7fedb30978c6cad20ff270f38b27
+PODFILE CHECKSUM: 0761294bc760ca1eefebe73eb5570ee39ec43c4c
 
 COCOAPODS: 1.15.2
